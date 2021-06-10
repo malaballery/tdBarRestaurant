@@ -2,24 +2,24 @@
 class Table {
 
   /**
-   * @var int $number -> numéro de la table
-   * @var mixed $description -> description de la table
-   * @var int $chairs -> nombre de chaises
+   * @var int $_number -> numéro de la table
+   * @var mixed $_description -> description de la table
+   * @var int $_chairs -> nombre de chaises
    */
-  private $number;
-  private $description;
-  private $chairs;
+  private int $_number;
+  private mixed $_description;
+  private int $_chairs;
 
   /**
-   * @param int $number -> numéro de la table
-   * @param string $description -> description de la table
-   * @param int $chairs -> nombre de chaises
+   * @param int $_number -> numéro de la table
+   * @param string $_description -> description de la table
+   * @param int $_chairs -> nombre de chaises
    */
-   public function __construct($number, $description, $chairs)
+   public function __construct($_number, $_description, $_chairs)
    {
-    $this -> number = $number;
-    $this -> description = $description;
-    $this -> chairs = $chairs;
+    $this -> number = $_number;
+    $this -> description = $_description;
+    $this -> chairs = $_chairs;
    }
   
 }

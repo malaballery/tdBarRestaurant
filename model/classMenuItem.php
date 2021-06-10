@@ -2,29 +2,32 @@
 class MenuItem {
 
   /**
-   * @var string $name -> nom de l'item
-   * @var string $description -> description de l'item
-   * @var mixed $price -> prix de l'item
-   * @var mixed $meal -> relié à la table meal qui décrit en détails le meal 
+   * @var string $_name -> nom de l'item
+   * @var string $_description -> description de l'item
+   * @var mixed $_price -> prix de l'item
+   * @var mixed $_meal -> relié à la table meal qui décrit en détails le meal 
    */
-  private $name;
-  private $description;
-  private $price;
-  private $meal;
+  private string $_name;
+  private string $_description;
+  private mixed $_price;
+  private mixed $_meal;
 
   /**
-   * @param string $name -> nom de l'item
-   * @param string $description -> description de l'item
-   * @param mixed $price -> prix de l'item
-   * @param mixed $meal -> relié à la table meal qui décrit en détails le meal 
+   * @param string $_name -> nom de l'item
+   * @param string $_description -> description de l'item
+   * @param mixed $_price -> prix de l'item
+   * @param mixed $_meal -> relié à la table meal qui décrit en détails le meal 
    * 
    * return un tableau avec l'item du menu
    */
 
-   public function __construct($name, $description, $price, $meal)
+   public function __construct($_name, $_description, $_price, $_meal)
    {
-     $tabMenuItem = [$this -> name = $name, $this -> description = $description, $this -> price = $price, $this -> meal = $meal];
-     return $tabMenuItem;
+    $this -> name = $_name;
+    $this -> description = $_description;
+    $this -> price = $_price;
+    $this -> meal = $_meal;
+     
    }
 
   /** Méthode pour afficher le contenu d'un item du menu
@@ -33,9 +36,7 @@ class MenuItem {
    */
 
    public function getMenuItem() {
-    echo 'Nom : '.$this -> name.'<br>';
-    echo 'Quoi-est-ce ? : '.$this -> description.'<br>';
-    echo 'Prix : '.$this -> price.'€ <br>';
-    echo 'id du meal : '.$this -> meal;
+    $tabMenuItem = ['name' => $this -> name, 'description' => $this -> description, 'price' => $this -> price, 'meal' => $this -> meal];
+    return $tabMenuItem;
    }
 }

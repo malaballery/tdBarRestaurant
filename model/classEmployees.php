@@ -2,21 +2,21 @@
 class Employee {
 
   /**
-   * @var string $FirstName -> prénom de l'employé
-   * @var string $LastName -> nom de famille de l'employé
+   * @var string $_firstName -> prénom de l'employé
+   * @var string $_lastName -> nom de famille de l'employé
    */
-  private $firstName;
-  private $lastName;
+  private string $_firstName;
+  private string $_lastName;
 
   /**
-   * @param string $firstName -> prénom de l'employé
-   * @param string $lastName -> nom de famille de l'employé
+   * @param string $_firstName -> prénom de l'employé
+   * @param string $_lastName -> nom de famille de l'employé
    */
 
-   public function __construct($firstName, $lastName)
+   public function __construct($_firstName, $_lastName)
    {
-     $this -> firstName = $firstName;
-     $this -> lastName = $lastName;
+     $this -> firstName = $_firstName;
+     $this -> lastName = $_lastName;
    }
 
    public function IsAtWork() {
@@ -25,31 +25,31 @@ class Employee {
   /** Méthode pour récupérer le nom de l'employé
    * @param string $lastName -> nom de famille de l'employé
    */
-   public function getName($lastName) {
-     echo $this -> lastName = $lastName;
+   public function getName($_lastName) {
+     echo $this -> lastName = $_lastName;
    }
 }
 
 class Waiter extends Employee {
-  private $orders;
+  private int $_orders;
 
   /**
-   * @param mixed $orders -> commandes que le serveur sert
+   * @param mixed $orders -> id des commandes que le serveur sert
    */
-  public function __construct($orders, $firstName, $lastName) {
-    parent::__construct($firstName, $lastName);
-    $this -> orders = $orders;
+  public function __construct($_orders, $_firstName, $_lastName) {
+    parent::__construct($_firstName, $_lastName);
+    $this -> orders = $_orders;
   }
 }
 
 class Cook extends Employee {
-  private $meals;
+  private $_meals;
 
   /**
-   * @param mixed $meals -> repas que le cuisinier cuisine
+   * @param mixed $_meals -> repas que le cuisinier cuisine
    */
-  public function __construct($meals, $firstName, $lastName) {
-    parent::__construct($firstName, $lastName);
-    $this -> meals = $meals;
+  public function __construct($_meals, $_firstName, $_lastName) {
+    parent::__construct($_firstName, $_lastName);
+    $this -> meals = $_meals;
   }
 }
